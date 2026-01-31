@@ -29,15 +29,19 @@ pnpm install
 
 ### 2. Configure Environment
 
+Get a **FREE API key** from [Groq](https://console.groq.com) (takes 30 seconds):
+
 ```bash
 cp .env.example .env
 ```
 
-Add your OpenAI API key to `.env`:
+Add your Groq API key to `.env`:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
+
+Groq offers a generous free tier with very fast inference using Llama 3.3 70B.
 
 ### 3. Run Development Server
 
@@ -97,7 +101,7 @@ export default function LoginScreen() {
 
 - **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS
 - **Backend**: React Server Actions
-- **AI**: OpenAI-compatible API (GPT-4)
+- **AI**: Groq (Llama 3.3 70B) or OpenAI (GPT-4)
 - **Deployment**: Vercel
 
 ## Project Structure
@@ -126,10 +130,18 @@ export default function LoginScreen() {
 
 ## Environment Variables
 
-| Variable          | Required | Description                                |
-| ----------------- | -------- | ------------------------------------------ |
-| `OPENAI_API_KEY`  | Yes      | Your OpenAI API key                        |
-| `OPENAI_BASE_URL` | No       | Custom endpoint for OpenAI-compatible APIs |
+| Variable          | Required | Description                                              |
+| ----------------- | -------- | -------------------------------------------------------- |
+| `GROQ_API_KEY`    | Yes\*    | Free API key from https://console.groq.com (recommended) |
+| `OPENAI_API_KEY`  | Yes\*    | Your OpenAI API key (alternative to Groq)                |
+| `OPENAI_BASE_URL` | No       | Custom endpoint for OpenAI-compatible APIs               |
+
+\*Either GROQ_API_KEY or OPENAI_API_KEY is required
+
+## AI Provider
+
+- **Groq (Recommended)**: Free tier with Llama 3.3 70B - very fast, generous limits
+- **OpenAI**: GPT-4 - highest quality but paid
 
 ## License
 
