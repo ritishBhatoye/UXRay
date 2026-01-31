@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ExpoNext UX Copilot",
+  title: "UX Ray",
   description:
     "AI-powered UX, accessibility, and performance analysis for Expo and Next.js components",
   icons: {
