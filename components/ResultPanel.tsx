@@ -34,7 +34,7 @@ export default function ResultPanel({
   if (!feedback) {
     return (
       <div className="flex items-center justify-center h-full text-gray-400">
-        <p>Paste your code and click "Analyze UX" to get started</p>
+        <p>Paste your code and click &quot;Analyze UX&quot; to get started</p>
       </div>
     );
   }
