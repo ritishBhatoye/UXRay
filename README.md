@@ -99,7 +99,7 @@ export default function LoginScreen() {
 
 ## Tech Stack
 
-- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS
+- **Frontend**: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS
 - **Backend**: React Server Actions
 - **AI**: Groq (Llama 3.3 70B) or OpenAI (GPT-4)
 - **Deployment**: Vercel
