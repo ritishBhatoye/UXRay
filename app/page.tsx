@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Editor from "@/components/Editor";
 import ResultPanel from "@/components/ResultPanel";
+import Logo from "@/components/Logo";
 import { analyzeComponentAction } from "./actions";
 import { Platform } from "@/lib/analyze";
 
@@ -41,23 +42,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                ExpoNext UX Copilot
-              </h1>
-              <p className="mt-2 text-gray-600">
-                AI-powered UX, accessibility, and performance analysis for Expo
-                and Next.js
-              </p>
-            </div>
+          <div className="flex items-center justify-between">
+            <Logo />
             <a
               href="https://github.com/YOUR_GITHUB_USERNAME"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
               aria-label="View on GitHub"
             >
               <svg
